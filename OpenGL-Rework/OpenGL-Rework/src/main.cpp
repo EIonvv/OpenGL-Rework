@@ -184,6 +184,9 @@ int main() {
   mainJ.update();
   if (mainJ.isPresent()) {
     std::cout << mainJ.getName() << " is present." << std::endl;
+  } else {
+    std::cout << "Not present." << std::endl;
+  
   }
 
   while (!glfwWindowShouldClose(window)) {
@@ -259,7 +262,7 @@ void processInput(GLFWwindow *window) {
       mixVal = 0.0f;
     }
   }
-
+  /* movement with keyboard
   if (Keyboard::key(GLFW_KEY_W)) {
     transform = glm::translate(transform, glm::vec3(0.0f, 0.1f, 0.0f));
   }
@@ -273,6 +276,7 @@ void processInput(GLFWwindow *window) {
   if (Keyboard::key(GLFW_KEY_D)) {
     transform = glm::translate(transform, glm::vec3(0.1f, 0.0f, 0.0f));
   }
+  */
 
   /* mouse
   if (Mouse::button(GLFW_MOUSE_BUTTON_LEFT)) {

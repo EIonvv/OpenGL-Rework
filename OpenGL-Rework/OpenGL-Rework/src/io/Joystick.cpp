@@ -1,4 +1,5 @@
 #include "Joystick.h"
+#include <iostream>
 
 Joystick::Joystick(int i) {
   id = getId(i);
