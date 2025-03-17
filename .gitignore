@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/OpenGL-Rework/.vs/OpenGL-Rework
+/OpenGL-Rework/OpenGL-Rework/x64/Release
+/OpenGL-Rework/x64/Release
