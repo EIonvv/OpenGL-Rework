@@ -21,8 +21,7 @@
 void framebuffer_size_callback(GLFWwindow *window, int width, int height);
 void processInput(GLFWwindow *window);
 
-unsigned int SCR_WIDTH = 800;
-unsigned int SCR_HEIGHT = 600;
+unsigned int SCR_WIDTH = 800,SCR_HEIGHT = 600;
 
 float mixVal = 0.5f;
 
@@ -112,10 +111,10 @@ int main() {
   //// bottom right 	0.5f, 0.5f, 0.0f,	1.0f, 0.2f, 1.0f,	1.0f, 1.0f
   //// top right
   // };
-  unsigned int indices[] = {
-      0, 1, 2, // first triangle
-      3, 1, 2  // second triangle
-  };
+  //unsigned int indices[] = {
+  //    0, 1, 2, // first triangle
+  //    3, 1, 2  // second triangle
+  //};
 
   // VBO, VAO, EBO
   unsigned int VBO, VAO;

@@ -145,8 +145,8 @@
     <ClCompile Include="src\io\Joystick.cpp" />
     <ClCompile Include="src\io\Keyboard.cpp" />
     <ClCompile Include="src\io\Mouse.cpp" />
-    <ClCompile Include="src\lib\glad.c" />
-    <ClCompile Include="src\lib\stb.cpp" />
+    <ClCompile Include="lib\glad.c" />
+    <ClCompile Include="lib\stb.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Shader.cpp" />
   </ItemGroup>
