@@ -1,17 +1,17 @@
-#ifndef CUBE_H
-#define CUBE_H
+#ifndef CUBE_2_HPP
+#define CUBE_2_HPP
 
 #include "../model.h"
 #include "../material.h"
 
-class Cube : public Model {
+class Cube2 : public Model {
 public:
 	glm::vec3 pos;
 	glm::vec3 size;
 
 	Material material;
 
-	Cube(Material material, glm::vec3 pos = glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3 size = glm::vec3(1.0f, 1.0f, 1.0f))
+	Cube2(Material material, glm::vec3 pos = glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3 size = glm::vec3(1.0f, 1.0f, 1.0f))
 		: material(material), pos(pos), size(size) {
 	}
 

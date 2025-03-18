@@ -1,7 +1,7 @@
 #include "screen.h"
 
-#include "keyboard.h"
-#include "mouse.h"
+#include "../keyboard/keyboard.h"
+#include "../mouse/mouse.h"
 
 unsigned int Screen::SCR_WIDTH = 800;
 unsigned int Screen::SCR_HEIGHT = 600;

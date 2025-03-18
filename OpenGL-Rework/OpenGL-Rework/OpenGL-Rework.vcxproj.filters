@@ -33,29 +33,48 @@
     <ClCompile Include="src\graphics\model.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\io\camera.cpp">
+    <ClCompile Include="src\io\camera\camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\io\joystick.cpp">
+    <ClCompile Include="src\io\joystick\joystick.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\io\keyboard.cpp">
+    <ClCompile Include="src\io\keyboard\keyboard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\io\mouse.cpp">
+    <ClCompile Include="src\io\mouse\mouse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\io\screen.cpp">
+    <ClCompile Include="src\io\screen\screen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\material.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="lib\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\io\camera\camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\io\joystick\joystick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\io\keyboard\keyboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\io\mouse\mouse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\io\screen\screen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\object.vs" />
     <None Include="assets\object.fs" />
     <None Include="glfw3.dll" />
+    <None Include="assets\object.vs" />
+    <None Include="assets\lamp.fs" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\graphics\shader.h">
@@ -73,19 +92,40 @@
     <ClInclude Include="src\graphics\models\cube.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\io\camera.h">
+    <ClInclude Include="src\io\camera\camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\io\joystick.h">
+    <ClInclude Include="src\io\joystick\joystick.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\io\keyboard.h">
+    <ClInclude Include="src\io\keyboard\keyboard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\io\mouse.h">
+    <ClInclude Include="src\io\mouse\mouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\io\screen.h">
+    <ClInclude Include="src\io\screen\screen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\graphics\material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\graphics\models\lamp.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\io\screen\screen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\io\camera\camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\io\joystick\joystick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\io\keyboard\keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\io\mouse\mouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -93,13 +133,7 @@
     <Image Include="assets\images\image1.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="assets\images\image2.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="assets\image1.jpg">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\image2.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
