@@ -1,16 +1,18 @@
 #include "texture.h"
 
 #include <iostream>
+#include <filesystem>
+#include <string>
 
 int Texture::currentId = 0;
 
 Texture::Texture() {}
 
-Texture::Texture(const char* path, const char* name, bool defaultParams) 
+Texture::Texture(const char* path, const char* name, bool defaultParams)
 	: path(path), name(name), id(currentId++) {
 	generate();
 
-	if (defaultParams) {
+	if( defaultParams ) {
 		setFilters(GL_LINEAR, GL_LINEAR_MIPMAP_LINEAR);
 		setWrap(GL_REPEAT);
 	}
@@ -23,20 +25,23 @@ void Texture::generate() {
 
 void Texture::load(bool flip) {
 	stbi_set_flip_vertically_on_load(flip);
-
+	//std::cout << getFileExt(path) << std::endl;
 	unsigned char* data = stbi_load(path, &width, &height, &nChannels, 0);
-
 	GLenum colorMode = GL_RGB;
-	switch (nChannels) {
-	case 1:
-		colorMode = GL_RED;
-		break;
-	case 4:
-		colorMode = GL_RGBA;
-		break;
+	switch( nChannels ) {
+		case 1:
+			colorMode = GL_RED;
+			break;
+		case 4:
+			colorMode = GL_RGBA;
+			break;
 	};
 
-	if (data) {
+	if( data ) {
+
+		// get the file ext
+		//std::cout << data << std::endl;
+
 		glBindTexture(GL_TEXTURE_2D, id);
 		glTexImage2D(GL_TEXTURE_2D, 0, colorMode, width, height, 0, colorMode, GL_UNSIGNED_BYTE, data);
 		glGenerateMipmap(GL_TEXTURE_2D);
@@ -73,3 +78,4 @@ void Texture::setBorderColor(float borderColor[4]) {
 void Texture::activate() {
 	glActiveTexture(GL_TEXTURE0 + id);
 }
+

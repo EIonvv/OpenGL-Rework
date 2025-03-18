@@ -10,6 +10,7 @@
 #include "graphics/shader.h"
 #include "graphics/texture.h"
 #include "graphics/model.h"
+#include "graphics/light.h"
 
 #include "graphics/models/cube.hpp"
 
@@ -73,12 +74,18 @@ int main() {
 	// MODELS ==============================
 	Cube cube(Material::mix(Material::emerald, Material::gold, 0.7), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.75f));
 	cube.init();
-	// End of MODELS ==============================
 
-	Lamp lamp(glm::vec3(1.0f), glm::vec3(1.0f), glm::vec3(1.0f), glm::vec3(1.0f), glm::vec3(-1.0f, -0.5f, .5f), glm::vec3(0.25f));
+	//DirLight dirLight = { glm::vec3(-0.2f, -1.0f, -0.3f), glm::vec3(0.1f), glm::vec3(0.4f), glm::vec3(0.75f) };
+	// End of MODELS ==============================
+	Lamp lamp(glm::vec3(1.0f), glm::vec3(1.0f), glm::vec3(1.0f), glm::vec3(1.0f), glm::vec3(-1.0f, -0.5f, 0.5f), glm::vec3(0.25f));
 	lamp.init();
+	
+	SpotLight spotLight = {
+		Camera::defaultCamera.cameraPos,Camera::defaultCamera.cameraFront,
+		glm::cos(glm::radians(12.5f)), glm::cos(glm::radians(20.0f)),
+		glm::vec3(0.0f), glm::vec3(1.0f), glm::vec3(1.0f)
+	};
 	// End of MODELS ==============================
-
 
 	mainJ.update();
 	if( mainJ.isPresent() ) {
@@ -99,15 +106,19 @@ int main() {
 
 		// draw shapes
 		shader.activate();
-
-		shader.setFloat("mixVal", mixVal);
-		shader.set3Float("light.position", lamp.pos);
 		shader.set3Float("viewPos", Camera::defaultCamera.cameraPos);
 
+		//dirLight.direction = glm::vec3(
+		//	glm::rotate(glm::mat4(1.0f),
+		//							glm::radians(0.5f),
+		//							glm::vec3(1.0f, 0.0f, 0.0f)) * glm::vec4(dirLight.direction, 1.0f));
+		//dirLight.render(shader);
 		// set light strengths
-		shader.set3Float("light.ambient", lamp.ambient);
-		shader.set3Float("light.diffuse", lamp.diffuse);
-		shader.set3Float("light.specular", lamp.specular);
+		//lamp.pointLight.render(shader);
+
+		spotLight.position = Camera::defaultCamera.cameraPos;
+		spotLight.direction = Camera::defaultCamera.cameraFront;
+		spotLight.render(shader);
 
 		//glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 		glDrawArrays(GL_TRIANGLES, 0, 36);

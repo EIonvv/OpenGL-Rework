@@ -69,6 +69,9 @@
     <ClCompile Include="src\io\screen\screen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\graphics\light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\object.fs" />
@@ -128,12 +131,24 @@
     <ClInclude Include="src\io\mouse\mouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\graphics\light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\images\image1.jpg">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="assets\image1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\image2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\image3_specular.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\image3.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

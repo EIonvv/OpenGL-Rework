@@ -132,6 +132,7 @@
       <AdditionalIncludeDirectories>
       </AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="lib\glad.c" />
+    <ClCompile Include="src\graphics\light.cpp" />
     <ClCompile Include="src\graphics\mesh.cpp" />
     <ClCompile Include="src\graphics\model.cpp" />
     <ClCompile Include="src\graphics\material.cpp" />
@@ -163,6 +165,7 @@
     <None Include="glfw3.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\graphics\light.h" />
     <ClInclude Include="src\graphics\models\cube.hpp" />
     <ClInclude Include="src\graphics\mesh.h" />
     <ClInclude Include="src\graphics\model.h" />
@@ -178,6 +181,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\image1.jpg" />
+    <Image Include="assets\image2.png" />
+    <Image Include="assets\image3.jpg" />
+    <Image Include="assets\image3_specular.jpg" />
     <Image Include="assets\images\image1.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

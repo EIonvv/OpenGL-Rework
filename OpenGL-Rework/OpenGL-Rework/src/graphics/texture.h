@@ -6,6 +6,10 @@
 
 #include <stb/stb_image.h>
 
+#include <iostream>
+#include <filesystem>
+#include <string>
+
 class Texture {
 public:
 	Texture();
@@ -30,6 +34,7 @@ public:
 	const char* name;
 
 private:
+
 	static int currentId;
 
 	// img properties
