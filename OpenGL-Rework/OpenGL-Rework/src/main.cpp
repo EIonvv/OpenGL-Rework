@@ -65,16 +65,20 @@ int main() {
 
 	screen.setParameters();
 
-	// SHADERS===============================
+	// SHADERS ===============================
 	Shader shader("assets/object.vs", "assets/object.fs");
 	Shader lampShader("assets/object.vs", "assets/lamp.fs");
+	// End of SHADERS ===============================
 
-	// MODELS==============================
+	// MODELS ==============================
 	Cube cube(Material::mix(Material::emerald, Material::gold, 0.7), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.75f));
 	cube.init();
+	// End of MODELS ==============================
 
 	Lamp lamp(glm::vec3(1.0f), glm::vec3(1.0f), glm::vec3(1.0f), glm::vec3(1.0f), glm::vec3(-1.0f, -0.5f, .5f), glm::vec3(0.25f));
 	lamp.init();
+	// End of MODELS ==============================
+
 
 	mainJ.update();
 	if( mainJ.isPresent() ) {
